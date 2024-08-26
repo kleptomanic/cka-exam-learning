@@ -1,0 +1,8 @@
+Create a Service Account named deploy-user in admin-ns namespace. Also create a Role and RoleBinding named deploy-user-role and deploy-user-role-binding where role is able to
+- Create, Update, view and Delete Pods resources
+- Create, Update, view and Delete Deployment resources
+- Create, view and Delete CronJobs resources
+
+Also check whether the user is able to perform such activities without creating contexts and write command in /opt/rbac/rbac-sa-check.sh
+
+Finally, Create respective token for the ServiceAccount and create context named deploy-user-context for the current kubernetes cluster. Use the context and create a deployment with 3 replicas with image httpd.
